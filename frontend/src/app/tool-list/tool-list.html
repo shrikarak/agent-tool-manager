@@ -1,0 +1,10 @@
+<div>
+  <h2>Tools</h2>
+  <input type="text" [(ngModel)]="search" (keyup.enter)="onSearch()" placeholder="Search tools...">
+  <button (click)="onSearch()">Search</button>
+  <ul>
+    <li *ngFor="let tool of tools">
+      <a [routerLink]="['/tools', tool.id]">{{tool.name}}</a>
+    </li>
+  </ul>
+</div>

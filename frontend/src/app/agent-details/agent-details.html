@@ -1,0 +1,11 @@
+<div *ngIf="agent">
+  <h2>{{agent.name}}</h2>
+  <p><strong>Description:</strong> {{agent.description}}</p>
+  <p><strong>Persona:</strong> {{agent.persona}}</p>
+  <p><strong>Instructions:</strong> {{agent.instructions}}</p>
+  <p><strong>Version:</strong> {{agent.version}}</p>
+  <h3>Tools:</h3>
+  <ul>
+    <li *ngFor="let tool of agent.Tools">{{tool.name}}</li>
+  </ul>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  <h2>Agents</h2>
+  <input type="text" [(ngModel)]="search" (keyup.enter)="onSearch()" placeholder="Search agents...">
+  <button (click)="onSearch()">Search</button>
+  <ul>
+    <li *ngFor="let agent of agents">
+      <a [routerLink]="['/agents', agent.id]">{{agent.name}}</a>
+    </li>
+  </ul>
+</div>
